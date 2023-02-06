@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c147cc4e-a1dc-4732-bb9f-049b3e5d06cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/AddDrinksToBasket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AddFoodToBasket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BasketTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OrderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/BasketPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/DrinksPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/FoodPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/OrderPage.java" afterDir="false" />
+    <list default="true" id="c147cc4e-a1dc-4732-bb9f-049b3e5d06cc" name="Changes" comment="Add all classes.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Tests/AddDrinksToBasketTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Tests/AddFoodToBasketTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Tests/BasketTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Tests/OrderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Utils/DriverFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddDrinksToBasket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddFoodToBasket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasketTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Utils/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/BasketPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/DrinksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/DrinksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/FoodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/FoodPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/OrderPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +59,54 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/ZielonyBuszmen/Downloads/PobraneDoTestówAutomatycznychWJava/SeleniumJava",
+    "last_opened_file_path": "C:/Users/ZielonyBuszmen/Downloads/PobraneDoTestówAutomatycznychWJava/WebDriverManager/webdrivermanager-1.5.1.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RunManager" selected="TestNG.AddFoodToBasketTest">
+    <configuration name="AddDrinksToBasketTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="KebabOnlineTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.KebabOnline.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.KebabOnline.Tests" />
+      <option name="MAIN_CLASS_NAME" value="pl.KebabOnline.Tests.AddDrinksToBasketTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddFoodToBasketTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="KebabOnlineTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.KebabOnline.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.KebabOnline.Tests" />
+      <option name="MAIN_CLASS_NAME" value="pl.KebabOnline.Tests.AddFoodToBasketTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.AddFoodToBasketTest" />
+        <item itemvalue="TestNG.AddDrinksToBasketTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,6 +116,14 @@
       <option name="presentableId" value="Default" />
       <updated>1675676857418</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add all classes.">
+      <created>1675678828642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675678828642</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,5 +136,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add all classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add all classes." />
   </component>
 </project>

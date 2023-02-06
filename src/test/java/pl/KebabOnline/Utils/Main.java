@@ -1,3 +1,5 @@
+package pl.KebabOnline.Utils;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -9,14 +11,15 @@ public class Main {
 
     @BeforeTest
     public void setup(){
+//        DriverFactory.getDriver();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://jacekkomar.github.io/KebabOnline/index.html");
     }
 
-    @AfterTest
-    public void quitPage(){
-        driver.quit();
-    }
+//    @AfterTest
+//    public void quitPage(){
+//        driver.quit();
+//    }
 
 }
