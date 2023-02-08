@@ -27,7 +27,7 @@ public class FoodPage {
     }
 
 
-        public void  openKebabFoodPageClick() {
+        public void openKebabFoodPageClick() {
             openKebabFoodPage.click();
         }
 

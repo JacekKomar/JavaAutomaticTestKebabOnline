@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c147cc4e-a1dc-4732-bb9f-049b3e5d06cc" name="Changes" comment="Fixed some bugs">
+    <list default="true" id="c147cc4e-a1dc-4732-bb9f-049b3e5d06cc" name="Changes" comment="Add test of plus and dash buttons in FoodsPage.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/DrinksPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/DrinksPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/FoodPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/FoodPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Pages/OrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Tests/AddDrinksToBasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Tests/AddDrinksToBasketTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Tests/AddFoodToBasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Tests/AddFoodToBasketTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Utils/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/KebabOnline/Utils/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/ZielonyBuszmen/Downloads/PobraneDoTestówAutomatycznychWJava/WebDriverManager/webdrivermanager-1.5.1.jar",
+    "last_opened_file_path": "C:/Users/ZielonyBuszmen/Desktop/PROGRAMOWANIE JACKA/JAVA_TOOLBOX_TEST",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -55,7 +61,7 @@
       <module name="KebabOnlineTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pl.KebabOnline.Tests.*" />
+          <option name="PATTERN" value="pl.KebabOnline.Utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,7 +78,7 @@
       <module name="KebabOnlineTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pl.KebabOnline.Tests.*" />
+          <option name="PATTERN" value="pl.KebabOnline.Utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,10 +91,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AddFoodToBasketTest.addFoodToBasket" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="KebabOnlineTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.KebabOnline.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.KebabOnline.Tests" />
+      <option name="MAIN_CLASS_NAME" value="pl.KebabOnline.Tests.AddFoodToBasketTest" />
+      <option name="METHOD_NAME" value="addFoodToBasket" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.AddFoodToBasketTest" />
         <item itemvalue="TestNG.AddDrinksToBasketTest" />
+        <item itemvalue="TestNG.AddFoodToBasketTest.addFoodToBasket" />
       </list>
     </recent_temporary>
   </component>
@@ -115,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675691695389</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add test of plus and dash buttons in FoodsPage.">
+      <created>1675693009380</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675693009380</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +164,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add all classes." />
     <MESSAGE value="Fixed some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some bugs" />
+    <MESSAGE value="Add test of plus and dash buttons in FoodsPage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test of plus and dash buttons in FoodsPage." />
   </component>
 </project>

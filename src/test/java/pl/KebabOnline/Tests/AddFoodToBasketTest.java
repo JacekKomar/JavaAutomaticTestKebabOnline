@@ -3,9 +3,9 @@ package pl.KebabOnline.Tests;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import pl.KebabOnline.Pages.FoodPage;
-import pl.KebabOnline.Utils.Main;
 
 public class AddFoodToBasketTest extends Main {
+
 
     public void foodAddButton(String label){
         driver.findElement(By.xpath("(//i[@class=\"bi bi-plus-square\"])" + label +"")).click();
@@ -18,8 +18,8 @@ public class AddFoodToBasketTest extends Main {
 
     @Test(priority = 1)
     public void addFoodToBasket() {
-        FoodPage FoodPage = new FoodPage(driver);
-        FoodPage.openKebabFoodPageClick();
+        FoodPage foodPage = new FoodPage(driver);
+        foodPage.openKebabFoodPageClick();
         foodAddButton("[2]");
         foodAddButton("[2]");
         foodAddButton("[1]");
@@ -51,8 +51,8 @@ public class AddFoodToBasketTest extends Main {
 
     @Test(priority = 3)
     public void exitFoodPage(){
-        FoodPage FoodPage = new FoodPage(driver);
-        FoodPage.orderFoodButtonClick();
+        FoodPage foodPage = new FoodPage(driver);
+        foodPage.orderFoodButtonClick();
     }
 
 }
