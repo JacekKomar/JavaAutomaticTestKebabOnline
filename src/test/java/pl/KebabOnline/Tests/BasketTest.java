@@ -2,11 +2,12 @@ package pl.KebabOnline.Tests;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 import pl.KebabOnline.Pages.BasketPage;
 import pl.KebabOnline.Pages.DrinksPage;
 
 public class BasketTest extends Main {
-
+    Logger logger = Logger.getLogger(AddFoodToBasketTest.class.getName().getClass());
     public void inBasketAddButton(String label) {
 
         driver.findElement(By.xpath("(//i[@class=\"bi bi-plus-square\"])" + label + "")).click();
@@ -34,6 +35,7 @@ public class BasketTest extends Main {
             inBasketAddButton("[4]");
             inBasketAddButton("[1]");
             inBasketDashButton("[2]");
+            logger.info("Zmiana ilości przedmiotów w koszyku.");
         }
 
 
@@ -41,6 +43,7 @@ public class BasketTest extends Main {
         public void goToOrder(){
             BasketPage basketPage = new BasketPage(driver);
             basketPage.OrderPage();
+            logger.info("Złożono zamówienie.");
         }
 
 }

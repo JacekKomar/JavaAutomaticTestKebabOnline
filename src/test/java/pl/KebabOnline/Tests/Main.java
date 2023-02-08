@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeTest;
 
 
 public class Main {
+
     protected WebDriver driver;
 
     @BeforeTest

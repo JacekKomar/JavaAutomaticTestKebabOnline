@@ -3,10 +3,11 @@ package pl.KebabOnline.Tests;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 import pl.KebabOnline.Pages.DrinksPage;
 
 public class AddDrinksToBasketTest extends Main {
-
+    Logger logger = Logger.getLogger(AddFoodToBasketTest.class.getName().getClass());
         public void drinksAddButton(String label){
             driver.findElement(By.xpath("(//i[@class=\"bi bi-plus-square\"])" + label +"")).click();
 
@@ -26,7 +27,7 @@ public class AddDrinksToBasketTest extends Main {
             alert.accept();
             Thread.sleep(2000);
             alert.accept();
-
+            logger.info("Wpisano wiek klienta.");
             Thread.sleep(2000);
             drinksAddButton("[1]");
             drinksAddButton("[2]");
@@ -42,6 +43,7 @@ public class AddDrinksToBasketTest extends Main {
             drinksAddButton("[11]");
             drinksAddButton("[12]");
             drinksAddButton("[12]");
+            logger.info("Dodano napoje do koszyka.");
         }
 
         @Test(priority = 2)
@@ -58,6 +60,7 @@ public class AddDrinksToBasketTest extends Main {
             drinksDeleteButton("[10]");
             drinksDeleteButton("[11]");
             drinksDeleteButton("[12]");
+            logger.info("Usunięto napoje z koszyka.");
 
         }
 
@@ -65,6 +68,7 @@ public class AddDrinksToBasketTest extends Main {
         public void exitDrinksPage(){
             DrinksPage DrinksPage = new DrinksPage(driver);
             DrinksPage.orderDrinksButtonClick();
+            logger.info("Przejście do koszyka.");
         }
 
 

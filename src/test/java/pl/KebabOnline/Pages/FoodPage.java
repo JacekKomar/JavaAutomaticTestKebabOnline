@@ -5,6 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.log4testng.Logger;
+import pl.KebabOnline.Tests.AddFoodToBasketTest;
+
+import java.util.logging.LogManager;
 
 public class FoodPage {
 
@@ -20,15 +24,19 @@ public class FoodPage {
 //    public void foodButton(String label){
 //        driver.findElement(By.xpath("(//i)" + label + "")).click();
 //    }
-
+//    private static final Logger Logger = LogManager.getLogger();
 
     public FoodPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
+
+
     }
 
 
-        public void openKebabFoodPageClick() {
+        public void openKebabFoodPageClick()
+        {
             openKebabFoodPage.click();
+//            Logger.info("aa");
         }
 
     public void  orderFoodButtonClick() {
