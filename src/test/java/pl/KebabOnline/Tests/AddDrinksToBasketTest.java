@@ -17,14 +17,17 @@ public class AddDrinksToBasketTest extends Main {
         }
 
         @Test(priority = 1)
-        public void addDrinksToBasket() {
+        public void addDrinksToBasket() throws InterruptedException {
             DrinksPage DrinksPage = new DrinksPage(driver);
             DrinksPage.openDrinksPageClick();
 
             Alert alert = driver.switchTo().alert();
             driver.switchTo().alert().sendKeys("22");
             alert.accept();
+            Thread.sleep(2000);
+            alert.accept();
 
+            Thread.sleep(2000);
             drinksAddButton("[1]");
             drinksAddButton("[2]");
             drinksAddButton("[3]");
