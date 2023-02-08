@@ -6,6 +6,7 @@ import org.testng.log4testng.Logger;
 import pl.KebabOnline.Pages.BasketPage;
 import pl.KebabOnline.Pages.DrinksPage;
 import pl.KebabOnline.Pages.FoodPage;
+import pl.KebabOnline.Pages.OrderPage;
 
 public class UnitetTestCode extends Main{
 
@@ -162,36 +163,12 @@ public class UnitetTestCode extends Main{
         basketPage.OrderPage();
         logger.info("Złożono zamówienie.");
     }
+    @Test(priority = 9)
+    public void basket(){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        OrderPage orderPage = new OrderPage(driver);
+        orderPage.addTextToInput();
+        logger.info("Dodano dane o osobie zamawiającej.");
+    }
 
 }
