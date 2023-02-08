@@ -33,22 +33,17 @@ public class FoodPage {
     }
 
 
-        public void openKebabFoodPageClick()
-        {
-            openKebabFoodPage.click();
+    public void openKebabFoodPageClick()
+    {
+        openKebabFoodPage.click();
 //            Logger.info("aa");
-        }
+    }
 
     public void  orderFoodButtonClick() {
         orderFoodButton.click();
     }
 
 
-    }
-
-
-
-
-
+}
 
 

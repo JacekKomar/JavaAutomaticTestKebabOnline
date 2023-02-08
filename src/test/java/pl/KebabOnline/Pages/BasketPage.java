@@ -20,7 +20,7 @@ public class BasketPage {
     }
 
 
-    public void BasketPage(){
+    public void BasketPageOpen(){
         yourShoppingPageOpen.click();
     }
     public void OrderPage(){

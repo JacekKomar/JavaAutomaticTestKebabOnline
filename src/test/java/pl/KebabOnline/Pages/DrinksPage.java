@@ -10,7 +10,7 @@ public class DrinksPage {
     @FindBy(xpath = "(//a[normalize-space()='Napoje'])")
     private WebElement openDrinksPage;
 
-    @FindBy(xpath = "(//button[contains(text(),'Zamów')])[1]")
+    @FindBy(xpath = "(//button[contains(text(),'Zamów')])[12]")
     private WebElement orderDrinksButton;
 
     public DrinksPage(WebDriver driver) {

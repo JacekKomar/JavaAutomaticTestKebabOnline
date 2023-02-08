@@ -28,7 +28,7 @@ public class BasketTest extends Main {
         @Test(priority = 1)
         public void changeItemsInBasket(){
             BasketPage basketPage = new BasketPage(driver);
-            basketPage.BasketPage();
+            basketPage.BasketPageOpen();
             inBasketDeleteItemButton("[5]");
             inBasketAddButton("[1]");
             inBasketAddButton("[3]");
