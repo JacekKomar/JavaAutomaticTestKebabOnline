@@ -2,15 +2,15 @@ package pl.KebabOnline.Tests;
 
 import org.openqa.selenium.Alert;
 import org.testng.annotations.Test;
-import org.testng.log4testng.Logger;
 import pl.KebabOnline.Pages.BasketPage;
 import pl.KebabOnline.Pages.DrinksPage;
 import pl.KebabOnline.Pages.FoodPage;
 import pl.KebabOnline.Pages.OrderPage;
+import java.util.logging.Logger;
 
 public class UnitedTestCode extends Main {
 
-    Logger logger = Logger.getLogger(UnitedTestCode.class.getName().getClass());
+    java.util.logging.Logger logger = Logger.getLogger(UnitedTestCode.class.getName());
 
     @Test(priority = 1)
     public void addFoodToBasket() {
