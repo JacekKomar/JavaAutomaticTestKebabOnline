@@ -1,6 +1,6 @@
 package pl.KebabOnline.Tests;
+
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 import pl.KebabOnline.Pages.BasketPage;
@@ -107,10 +107,8 @@ public class UnitedTestCode extends Main {
 
     @Test(priority = 7)
     public void changeItemsInBasket() throws InterruptedException {
-        BasketPage basketPage = new BasketPage(driver);
-//        basketPage.BasketPageOpen();
         Thread.sleep(2000);
-//        inBasketDeleteItemButton("[5]");
+        inBasketDeleteItemButton("[5]");
         inBasketAddButton("[1]");
         inBasketAddButton("[3]");
         inBasketAddButton("[4]");

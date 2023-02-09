@@ -1,6 +1,5 @@
 package pl.KebabOnline.Pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,26 +13,12 @@ public class BasketPage {
     @FindBy(xpath = "(//button[contains(text(),'Przejdź do płatności')])")
     private WebElement goToOrder;
 
-
     public BasketPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
-
-    public void BasketPageOpen(){
-        yourShoppingPageOpen.click();
-    }
     public void OrderPage(){
         goToOrder.click();
     }
 
-
-
-
-
-
-
-
-
 }
-

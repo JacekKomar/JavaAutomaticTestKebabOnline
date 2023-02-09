@@ -26,15 +26,4 @@ public class DrinksPage {
         orderDrinksButton.click();
     }
 
-
 }
-
-
-
-
-
-
-
-
-
-
