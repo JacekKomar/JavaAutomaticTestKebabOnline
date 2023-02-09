@@ -6,11 +6,8 @@ import pl.KebabOnline.Pages.BasketPage;
 import pl.KebabOnline.Pages.DrinksPage;
 import pl.KebabOnline.Pages.FoodPage;
 import pl.KebabOnline.Pages.OrderPage;
-import java.util.logging.Logger;
 
 public class UnitedTestCode extends Main {
-
-    java.util.logging.Logger logger = Logger.getLogger(UnitedTestCode.class.getName());
 
     @Test(priority = 1)
     public void addFoodToBasket() {
@@ -130,4 +127,5 @@ public class UnitedTestCode extends Main {
         orderPage.addTextToInput();
         logger.info("Dodano dane o osobie zamawiającej.");
     }
+
 }

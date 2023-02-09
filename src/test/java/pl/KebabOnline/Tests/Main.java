@@ -3,10 +3,13 @@ package pl.KebabOnline.Tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
+
+import java.util.logging.Logger;
 
 public class Main {
+
+    java.util.logging.Logger logger = Logger.getLogger(UnitedTestCode.class.getName());
 
     protected WebDriver driver;
 
@@ -20,6 +23,11 @@ public class Main {
     @AfterTest
     public void quitPage(){
         driver.quit();
+    }
+
+    @BeforeMethod
+    public void nextTestInfo(){
+        logger.warning("Kolejny test:");
     }
 
     public void foodAddButton(String label){
