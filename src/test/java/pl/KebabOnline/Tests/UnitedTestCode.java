@@ -8,18 +8,9 @@ import pl.KebabOnline.Pages.DrinksPage;
 import pl.KebabOnline.Pages.FoodPage;
 import pl.KebabOnline.Pages.OrderPage;
 
-public class UnitetTestCode extends Main{
+public class UnitedTestCode extends Main {
 
-    Logger logger = Logger.getLogger(AddFoodToBasketTest.class.getName().getClass());
-
-    public void foodAddButton(String label){
-        driver.findElement(By.xpath("(//i[@class=\"bi bi-plus-square\"])" + label +"")).click();
-
-    }
-    public void foodDeleteButton(String label){
-        driver.findElement(By.xpath("(//i[@class=\"bi bi-dash-square\"])" + label +"")).click();
-
-    }
+    Logger logger = Logger.getLogger(UnitedTestCode.class.getName().getClass());
 
     @Test(priority = 1)
     public void addFoodToBasket() {
@@ -43,7 +34,6 @@ public class UnitetTestCode extends Main{
 
     @Test(priority = 2)
     public void deleteFood(){
-
         foodDeleteButton("[1]");
         foodDeleteButton("[2]");
         foodDeleteButton("[3]");
@@ -62,20 +52,11 @@ public class UnitetTestCode extends Main{
         foodPage.orderFoodButtonClick();
         logger.info("Przejście do koszyka.");
     }
-    public void drinksAddButton(String label){
-        driver.findElement(By.xpath("(//i[@class=\"bi bi-plus-square\"])" + label +"")).click();
-
-    }
-    public void drinksDeleteButton(String label){
-        driver.findElement(By.xpath("(//i[@class=\"bi bi-dash-square\"])" + label +"")).click();
-
-    }
 
     @Test(priority = 4)
     public void addDrinksToBasket() throws InterruptedException {
         DrinksPage DrinksPage = new DrinksPage(driver);
         DrinksPage.openDrinksPageClick();
-
         Alert alert = driver.switchTo().alert();
         driver.switchTo().alert().sendKeys("22");
         alert.accept();
@@ -115,7 +96,6 @@ public class UnitetTestCode extends Main{
         drinksDeleteButton("[11]");
         drinksDeleteButton("[12]");
         logger.info("Usunięto napoje z koszyka.");
-
     }
 
     @Test(priority = 6)
@@ -123,23 +103,6 @@ public class UnitetTestCode extends Main{
         DrinksPage DrinksPage = new DrinksPage(driver);
         DrinksPage.orderDrinksButtonClick();
         logger.info("Przejście do koszyka.");
-    }
-
-    public void inBasketAddButton(String label) {
-
-        driver.findElement(By.xpath("(//i[@class=\"bi bi-plus-square\"])" + label + "")).click();
-
-    }
-
-    public void inBasketDashButton(String label) {
-
-        driver.findElement(By.xpath("(//i[@class=\"bi bi-dash-square\"])" + label + "")).click();
-    }
-
-    public void inBasketDeleteItemButton(String label) {
-
-        driver.findElement(By.xpath("(//i[@class=\"bi bi-x-lg\"])" + label + "")).click();
-
     }
 
     @Test(priority = 7)
@@ -156,19 +119,17 @@ public class UnitetTestCode extends Main{
         logger.info("Zmiana ilości przedmiotów w koszyku.");
     }
 
-
     @Test(priority = 8)
     public void goToOrder(){
         BasketPage basketPage = new BasketPage(driver);
         basketPage.OrderPage();
         logger.info("Złożono zamówienie.");
     }
+
     @Test(priority = 9)
     public void basket(){
-
         OrderPage orderPage = new OrderPage(driver);
         orderPage.addTextToInput();
         logger.info("Dodano dane o osobie zamawiającej.");
     }
-
 }
