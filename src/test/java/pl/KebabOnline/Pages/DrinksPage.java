@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class DrinksPage {
 
@@ -20,9 +21,18 @@ public class DrinksPage {
 
     public void  openDrinksPageClick() {
         openDrinksPage.click();
+//
+    }
+
+    public void drinksPageInfo() {
+        Assert.assertEquals(openDrinksPage.getText(), "Napoje");
     }
 
     public void  orderDrinksButtonClick() {
+        orderDrinksButton.click();
+    }
+
+    public void orderButtonInfo() {
         orderDrinksButton.click();
     }
 

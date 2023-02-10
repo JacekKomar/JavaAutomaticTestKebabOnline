@@ -10,7 +10,7 @@ import pl.KebabOnline.Pages.OrderPage;
 public class UnitedTestCode extends Main {
 
     @Test(priority = 1)
-    public void testAddFoodToBasket() {
+    public void testAddAndDeleteFoodsInBasket() {
         FoodPage foodPage = new FoodPage(driver);
         foodPage.openKebabFoodPageClick();
         foodAddButton("[2]");
@@ -26,10 +26,6 @@ public class UnitedTestCode extends Main {
         foodAddButton("[9]");
         foodAddButton("[1]");
         foodAddButton("[2]");
-    }
-
-    @Test(priority = 2)
-    public void testDeleteFoodFromFoodPage(){
         foodDeleteButton("[1]");
         foodDeleteButton("[2]");
         foodDeleteButton("[3]");
@@ -41,14 +37,14 @@ public class UnitedTestCode extends Main {
         foodDeleteButton("[9]");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void testExitFoodPage(){
         FoodPage foodPage = new FoodPage(driver);
         foodPage.orderFoodButtonClick();
     }
 
-    @Test(priority = 4)
-    public void testAddDrinksToBasket() throws InterruptedException {
+    @Test(priority = 3)
+    public void testAddAndDeleteDrinksInBasket() throws InterruptedException {
         DrinksPage DrinksPage = new DrinksPage(driver);
         DrinksPage.openDrinksPageClick();
         Alert alert = driver.switchTo().alert();
@@ -71,10 +67,6 @@ public class UnitedTestCode extends Main {
         drinksAddButton("[11]");
         drinksAddButton("[12]");
         drinksAddButton("[12]");
-    }
-
-    @Test(priority = 5)
-    public void testDeleteDrinksFromDrinksPage(){
         drinksDeleteButton("[1]");
         drinksDeleteButton("[2]");
         drinksDeleteButton("[3]");
@@ -87,17 +79,16 @@ public class UnitedTestCode extends Main {
         drinksDeleteButton("[10]");
         drinksDeleteButton("[11]");
         drinksDeleteButton("[12]");
+        DrinksPage.drinksPageInfo();
     }
 
-    @Test(priority = 6)
-    public void testExitDrinksPage(){
-        DrinksPage DrinksPage = new DrinksPage(driver);
-        DrinksPage.orderDrinksButtonClick();
-    }
-
-    @Test(priority = 7)
+    @Test(priority = 4)
     public void testChangeItemsInBasket() throws InterruptedException {
+        DrinksPage DrinksPage = new DrinksPage(driver);
+        BasketPage basketPage = new BasketPage(driver);
+        DrinksPage.orderDrinksButtonClick();
         Thread.sleep(2000);
+        basketPage.OpenBasketPage();
         inBasketDeleteItemButton("[5]");
         inBasketAddButton("[1]");
         inBasketAddButton("[3]");
@@ -106,7 +97,7 @@ public class UnitedTestCode extends Main {
         inBasketDashButton("[2]");
     }
 
-    @Test(priority = 8)
+    @Test(priority = 5)
     public void testOfBasketAndOrderPage(){
         OrderPage orderPage = new OrderPage(driver);
         BasketPage basketPage = new BasketPage(driver);
