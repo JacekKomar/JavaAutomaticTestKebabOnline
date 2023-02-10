@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class OrderPage {
 
@@ -31,11 +32,17 @@ public class OrderPage {
 
     public void addTextToInput() {
     name.sendKeys("Jacek");
+        Assert.assertEquals(name.getAttribute("value"), "Jacek");
     username.sendKeys("Komar");
+        Assert.assertEquals(username.getAttribute("value"), "Komar");
     adress.sendKeys("Jasionka 31");
+        Assert.assertEquals(adress.getAttribute("value"), "Jasionka 31");
     phone.sendKeys("123321149");
+        Assert.assertEquals(phone.getAttribute("value"), "123321149");
     info.sendKeys("Sos: mieszany, mięso: baranina");
+        Assert.assertEquals(info.getAttribute("value"), "Sos: mieszany, mięso: baranina");
     orderButton.click();
+
     }
 
 }

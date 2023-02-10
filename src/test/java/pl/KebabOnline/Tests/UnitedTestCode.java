@@ -12,7 +12,6 @@ public class UnitedTestCode extends Main {
     @Test(priority = 1)
     public void testAddFoodToBasket() {
         FoodPage foodPage = new FoodPage(driver);
-
         foodPage.openKebabFoodPageClick();
         foodAddButton("[2]");
         foodAddButton("[2]");
@@ -108,14 +107,10 @@ public class UnitedTestCode extends Main {
     }
 
     @Test(priority = 8)
-    public void testGoToOrderPage(){
+    public void testOfBasketAndOrderPage(){
+        OrderPage orderPage = new OrderPage(driver);
         BasketPage basketPage = new BasketPage(driver);
         basketPage.OrderPage();
-    }
-
-    @Test(priority = 9)
-    public void testOfBasket(){
-        OrderPage orderPage = new OrderPage(driver);
         orderPage.addTextToInput();
     }
 
