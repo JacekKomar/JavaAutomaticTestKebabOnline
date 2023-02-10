@@ -1,5 +1,9 @@
 package pl.KebabOnline.Tests;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,11 +27,6 @@ public class Main {
     @AfterTest
     public void quitPage(){
         driver.quit();
-    }
-
-    @BeforeMethod
-    public void nextTestInfo(){
-        logger.warning("Kolejny test:");
     }
 
     public void foodAddButton(String label){
@@ -59,4 +58,19 @@ public class Main {
         driver.findElement(By.xpath("(//i[@class=\"bi bi-x-lg\"])" + label + "")).click();
     }
 
+    static ExtentTest test;
+    static ExtentReports report;
+    @BeforeClass
+    public static void startTest()
+    {
+        report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
+        test = report.startTest("ExtentDemo");
+    }
+
+    @AfterClass
+    public static void endTest()
+    {
+        report.endTest(test);
+        report.flush();
+    }
 }

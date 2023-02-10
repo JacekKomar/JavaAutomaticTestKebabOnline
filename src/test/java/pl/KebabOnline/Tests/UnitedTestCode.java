@@ -10,8 +10,9 @@ import pl.KebabOnline.Pages.OrderPage;
 public class UnitedTestCode extends Main {
 
     @Test(priority = 1)
-    public void addFoodToBasket() {
+    public void testAddFoodToBasket() {
         FoodPage foodPage = new FoodPage(driver);
+
         foodPage.openKebabFoodPageClick();
         foodAddButton("[2]");
         foodAddButton("[2]");
@@ -26,11 +27,10 @@ public class UnitedTestCode extends Main {
         foodAddButton("[9]");
         foodAddButton("[1]");
         foodAddButton("[2]");
-        logger.info("Dodano dania do koszyka.");
     }
 
     @Test(priority = 2)
-    public void deleteFood(){
+    public void testDeleteFoodFromFoodPage(){
         foodDeleteButton("[1]");
         foodDeleteButton("[2]");
         foodDeleteButton("[3]");
@@ -40,18 +40,16 @@ public class UnitedTestCode extends Main {
         foodDeleteButton("[7]");
         foodDeleteButton("[8]");
         foodDeleteButton("[9]");
-        logger.info("Usunięto dania z koszyka.");
     }
 
     @Test(priority = 3)
-    public void exitFoodPage(){
+    public void testExitFoodPage(){
         FoodPage foodPage = new FoodPage(driver);
         foodPage.orderFoodButtonClick();
-        logger.info("Przejście do koszyka.");
     }
 
     @Test(priority = 4)
-    public void addDrinksToBasket() throws InterruptedException {
+    public void testAddDrinksToBasket() throws InterruptedException {
         DrinksPage DrinksPage = new DrinksPage(driver);
         DrinksPage.openDrinksPageClick();
         Alert alert = driver.switchTo().alert();
@@ -59,7 +57,6 @@ public class UnitedTestCode extends Main {
         alert.accept();
         Thread.sleep(2000);
         alert.accept();
-        logger.info("Wpisano wiek klienta.");
         Thread.sleep(2000);
         drinksAddButton("[1]");
         drinksAddButton("[2]");
@@ -75,11 +72,10 @@ public class UnitedTestCode extends Main {
         drinksAddButton("[11]");
         drinksAddButton("[12]");
         drinksAddButton("[12]");
-        logger.info("Dodano napoje do koszyka.");
     }
 
     @Test(priority = 5)
-    public void deleteDrinks(){
+    public void testDeleteDrinksFromDrinksPage(){
         drinksDeleteButton("[1]");
         drinksDeleteButton("[2]");
         drinksDeleteButton("[3]");
@@ -92,18 +88,16 @@ public class UnitedTestCode extends Main {
         drinksDeleteButton("[10]");
         drinksDeleteButton("[11]");
         drinksDeleteButton("[12]");
-        logger.info("Usunięto napoje z koszyka.");
     }
 
     @Test(priority = 6)
-    public void exitDrinksPage(){
+    public void testExitDrinksPage(){
         DrinksPage DrinksPage = new DrinksPage(driver);
         DrinksPage.orderDrinksButtonClick();
-        logger.info("Przejście do koszyka.");
     }
 
     @Test(priority = 7)
-    public void changeItemsInBasket() throws InterruptedException {
+    public void testChangeItemsInBasket() throws InterruptedException {
         Thread.sleep(2000);
         inBasketDeleteItemButton("[5]");
         inBasketAddButton("[1]");
@@ -111,21 +105,18 @@ public class UnitedTestCode extends Main {
         inBasketAddButton("[4]");
         inBasketAddButton("[1]");
         inBasketDashButton("[2]");
-        logger.info("Zmiana ilości przedmiotów w koszyku.");
     }
 
     @Test(priority = 8)
-    public void goToOrder(){
+    public void testGoToOrderPage(){
         BasketPage basketPage = new BasketPage(driver);
         basketPage.OrderPage();
-        logger.info("Złożono zamówienie.");
     }
 
     @Test(priority = 9)
-    public void basket(){
+    public void testOfBasket(){
         OrderPage orderPage = new OrderPage(driver);
         orderPage.addTextToInput();
-        logger.info("Dodano dane o osobie zamawiającej.");
     }
 
 }
