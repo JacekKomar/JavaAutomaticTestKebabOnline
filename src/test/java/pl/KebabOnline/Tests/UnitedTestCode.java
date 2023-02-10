@@ -1,6 +1,12 @@
 package pl.KebabOnline.Tests;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.openqa.selenium.Alert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pl.KebabOnline.Pages.BasketPage;
 import pl.KebabOnline.Pages.DrinksPage;
@@ -8,6 +14,16 @@ import pl.KebabOnline.Pages.FoodPage;
 import pl.KebabOnline.Pages.OrderPage;
 
 public class UnitedTestCode extends Main {
+    static ExtentTest test;
+    static ExtentReports report;
+
+    @BeforeTest
+    public static void startTest()
+    {
+        report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
+        test = report.startTest("KebabOnlineTest");
+    }
+
 
     @Test(priority = 1)
     public void testAddAndDeleteFoodsInBasket() {
@@ -104,5 +120,10 @@ public class UnitedTestCode extends Main {
         basketPage.OrderPage();
         orderPage.addTextToInput();
     }
-
+    @AfterTest
+    public static void endTest()
+    {
+        report.endTest(test);
+        report.flush();
+    }
 }
